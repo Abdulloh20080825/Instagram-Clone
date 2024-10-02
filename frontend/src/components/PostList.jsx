@@ -9,7 +9,6 @@ const PostList = ({ item }) => {
 		const getUser = async () => {
 			const res = await axiosdata.get(`/get-user-info/${item.user}`);
 			setUser(res.data.user);
-			
 		};
 		getUser();
 	}, []);
@@ -40,15 +39,13 @@ const PostList = ({ item }) => {
 					className='w-full rounded-lg'
 				/>
 			</div>
-			<div className='flex justify-between items-center mt-4'>
+			<div className='flex flex-col items-start mt-4'>
 				<div className='flex space-x-4'>
 					<button>
 						<FaHeart className='text-2xl text-gray-400 hover:text-white transition duration-200' />
 					</button>
-					<button>
-						<FaComment className='text-2xl text-gray-400 hover:text-white transition duration-200' />
-					</button>
 				</div>
+				<p className='text-lg font-semibold'>0 {'"Likes"'}</p>
 			</div>
 
 			<div className='mt-3'>
@@ -56,9 +53,11 @@ const PostList = ({ item }) => {
 					<span className='font-semibold'>{user.username} </span>
 					{item.body}
 				</p>
-				<p className='text-gray-400 text-sm mt-1 cursor-pointer hover:underline'>
-					View all comments
-				</p>
+				<Link to={`/p/${item._id}`}>
+					<p className='text-gray-400 text-sm mt-1 cursor-pointer hover:underline'>
+						View all comments
+					</p>
+				</Link>
 			</div>
 		</div>
 	);

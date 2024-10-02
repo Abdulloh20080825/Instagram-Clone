@@ -72,7 +72,7 @@ const Profile = ({ t_user }) => {
 			console.error('Error subscribing:', error);
 		} finally {
 			setLoading(false);
-		} 
+		}
 	};
 
 	const unsubscribe = async () => {
@@ -211,12 +211,16 @@ const Profile = ({ t_user }) => {
 				isOpen={isOpenSubscribersModal}
 				onClose={closeSubscribersModal}
 				users={subscribersUser}
+				t_user={t_user}
+				selectedUser={id}
 			/>
 
 			<SubscriptionsModal
 				isOpen={isOpenSubscriptions}
 				onClose={closeSubscriptionModal}
 				users={subscriptionUsers}
+				t_user={t_user}
+				selectedUser={id}
 			/>
 
 			<EditProfileModal

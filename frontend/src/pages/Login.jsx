@@ -63,20 +63,6 @@ const Login = () => {
 						{loading ? 'Loading...' : 'Log In'}
 					</button>
 				</form>
-				<div className='flex items-center justify-between'>
-					<hr className='w-full border-gray-300' />
-					<span className='px-4 text-sm text-gray-500'>OR</span>
-					<hr className='w-full border-gray-300' />
-				</div>
-
-				<div className='text-center'>
-					<Link
-						to='/forgot-password'
-						className='text-sm text-blue-500 hover:underline'
-					>
-						Forgot Password?
-					</Link>
-				</div>
 			</div>
 			<div className='w-full max-w-sm p-4 mt-4 text-center bg-white border border-gray-300 rounded-md'>
 				<p>

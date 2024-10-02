@@ -534,6 +534,13 @@ app.get('/api/get-subscriptions/:id', isAuthToken, async (req, res) => {
 	}
 });
 
+app.post('/api/like-post/:id', isAuthToken, async (req, res) => {
+	try {
+		const { user } = req.user;
+		const id = req.params.id;
+	} catch (error) {}
+});
+
 app.listen(PORT, () => {
 	mongoose
 		.connect(process.env.MONGO_URL)

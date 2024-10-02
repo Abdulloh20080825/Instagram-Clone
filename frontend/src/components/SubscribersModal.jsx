@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import Modal from 'react-modal';
 
-const SubscribersModal = ({ isOpen, onClose, users }) => {
+const SubscribersModal = ({ isOpen, onClose, users, t_user, selectedUser }) => {
 	const [searchTerm, setSearchTerm] = useState('');
 	const handleSearchChange = (event) => {
 		setSearchTerm(event.target.value);
@@ -51,9 +51,11 @@ const SubscribersModal = ({ isOpen, onClose, users }) => {
 								</div>
 							</div>
 
-							<button className='text-red-500 bg-gray-700 p-1 px-3 rounded-lg hover:bg-gray-600'>
-								Remove
-							</button>
+							{t_user.username === selectedUser ? (
+								<button className='text-red-500 bg-gray-700 p-1 px-3 rounded-lg hover:bg-gray-600'>
+									Remove
+								</button>
+							) : null}
 						</div>
 					))}
 				</div>

@@ -12,6 +12,7 @@ const SubscribersModal = ({ isOpen, onClose, users }) => {
 			user.username.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			user.fullname.toLowerCase().includes(searchTerm.toLowerCase())
 	);
+	console.log(users);
 
 	return (
 		<Modal

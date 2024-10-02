@@ -88,9 +88,6 @@ const ViewPost = ({ _user_ }) => {
 					<div className='bg-gray-900 p-4 rounded-lg shadow-lg mb-4'>
 						<div className='flex justify-between items-center text-gray-400'>
 							<p className='hover:text-gray-200 cursor-pointer'>
-								❤️ {post.likes?.length || 0} Likes
-							</p>
-							<p className='hover:text-gray-200 cursor-pointer'>
 								💬 {post.comments?.length || 0} Comments
 							</p>
 						</div>
